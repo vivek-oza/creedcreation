@@ -77,7 +77,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="mt-12 pt-6 border-t border-gray-700 text-center text-sm text-gray-400">
-            <p>© {new Date().getFullYear()} CreedCreation. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Digilynk. All rights reserved.</p>
           </div>
         </div>
       </footer>
