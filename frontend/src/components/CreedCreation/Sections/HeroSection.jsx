@@ -8,7 +8,7 @@ import { Spotlight } from "@/components/ui/spotlight-new";
 export default function HeroSection() {
   return (
     <>
-      <section id="home" className="flex flex-col items-center justify-center rounded-b-3xl shadow-2xl px-5 mb-10 h-full min-h-[calc(100vh-5rem)] bg-zinc-950 light:bg-slate-50 relative overflow-hidden">
+      <section id="home" className="flex flex-col items-center justify-center rounded-b-3xl shadow-2xl px-5 h-full min-h-[calc(100vh-5rem)] bg-zinc-950 light:bg-slate-50 relative overflow-hidden">
         {/* <AuroraBackground>
           <motion.div
             initial={{ opacity: 0.0, y: 40 }}
