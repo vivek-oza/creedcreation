@@ -18,7 +18,7 @@ export default function TeamMembers() {
                 "I oversee our design strategy and ensure our design engineering team delivers appealing, converting and aesthetic solutions for our clients.",
             name: "Avinash Oza",
             designation: "Lead Graphic Designer at Creed Creation",
-            src: "https://raw.githubusercontent.com/vivek-oza/demo-images/refs/heads/main/avinash.jpg",
+            src: "https://raw.githubusercontent.com/vivek-oza/demo-images/refs/heads/main/avinash2.jpg",
         },
         {
             quote:
