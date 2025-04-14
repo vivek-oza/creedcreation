@@ -1,13 +1,20 @@
+// ++++++++++++++
+// ++++++++++++++
+// ++++++++++++++
+
+// ORIGINAL
+
 "use client";
 
 import React, { useState, useEffect } from "react";
-// import logo from "../../assets/icons/digilynk_dark.png";
-// import logoLight from "../../assets/icons/digilynk_light.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
 import { PulsatingButtonCustom } from "../magicui/PulsatingButtonCustom";
 import { useNavigate } from "react-router-dom";
 import { LucideMoon, LucideSun } from "lucide-react";
+import { RainbowButtonCustom } from "../magicui/rainbow-button-custom";
+import { HoverBorderGradient } from "../ui/hover-border-gradient";
+import logo from "../../assets/icons/creedCreation-dark.svg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,25 +23,28 @@ export default function Navbar() {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
-    document.documentElement.classList.toggle('dark');
+    document.documentElement.classList.toggle("dark");
   };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (isOpen && !event.target.closest('.mobile-menu-container') &&
-        !event.target.closest('.hamburger-react')) {
+      if (
+        isOpen &&
+        !event.target.closest(".mobile-menu-container") &&
+        !event.target.closest(".hamburger-react")
+      ) {
         setIsOpen(false);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
   const navLinks = [
     { name: "HOME", href: "#home" },
     { name: "PROJECTS", href: "#projects" },
     { name: "TEAM", href: "#team" },
-    { name: "CONTACT", href: "#contact" },
+    // { name: "CONTACT", href: "#contact" },
   ];
 
   const handleContactClick = () => {
@@ -43,40 +53,97 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 h-20 flex shadow-xl shadow-black/10 ${darkMode ? 'bg-zinc-900 border-gray-700' : 'bg-slate-200 border-gray-500'} border-b-2 items-center  justify-between md:justify-between p-2 px-4 sm:px-12 backdrop-blur-3xl z-50 transition-all duration-1000`}>
-
-      <div className="flex items-center gap-x-2 text-2xl font-semibold">
-        {/* <img src={darkMode ? logoLight : logo} className="md:size-12 size-8 transition-all duration-1000" alt="LOGO" /> */}
-        <span className={`inline transition-all duration-1000 md:text-3xl font-bold ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 h-20 flex items-center bg-transparent justify-between md:justify-between p-2 px-4 sm:px-12  z-50 transition-all duration-1000`}
+    >
+      {/* Logo and Brand Mobile*/}
+      <div className="flex md:hidden items-center gap-x-2 text-2xl font-semibold">
+        <img
+          src={logo}
+          className="md:size-28 size-16 transition-all duration-1000"
+          alt="LOGO"
+        />
+        {/* <span className={`inline pointer-events-none transition-all duration-1000 md:text-3xl font-bold ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
           CC
-        </span>
+        </span> */}
       </div>
-      {/* Desktop Navigation */}
-    <div className="hidden md:flex items-center justify-end w-full gap-10">
 
-        {/* Logo and Brand */}
+      {/* NAV GROUP */}
+      <div className="flex flex-col w-full space-y-2">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center justify-between w-full gap-10">
+          <div className="flex items-center gap-x-2 text-2xl font-semibold">
+            <img
+              src={logo}
+              className="md:size-12 size-8 transition-all duration-1000"
+              alt="LOGO"
+            />
+            <span className="text-white text-"></span>
+          </div>
 
-        <ul className="flex font-semibold text-sm gap-x-2">
-          {navLinks.map((link) => (
-            <li
-              key={link.name}
-              className={`${darkMode ? 'hover:bg-gray-700 text-white' : 'hover:bg-zinc-800 text-zinc-800 hover:text-white'} px-3 py-2 rounded-md hover:border-b-blue-500 cursor-pointer transition`}
-              onClick={() => navigate(link.href)}
+          <ul className="flex font-medium border-2 border-zinc-800 text-sm gap-x-4 p-1 rounded-full shadow-xl shadow-black/10 backdrop-blur-xl bg-black/45 }">
+            {navLinks.map((link) => (
+              <li
+                key={link.name}
+                className={`${
+                  darkMode
+                    ? "hover:bg-orange-600/65 text-white"
+                    : "hover:bg-zinc-800 text-zinc-800 hover:text-white"
+                } px-3 py-2 hover:scale-105 duration-500 rounded-full cursor-pointer transition`}
+                onClick={() => navigate(link.href)}
+              >
+                {link.name}
+              </li>
+            ))}
+          </ul>
+
+          <HoverBorderGradient
+            containerClassName="rounded-full"
+            as="button"
+            className="bg-zinc-900 hover:bg-orange-500 hover:scale-110 transition duration-700 text-white flex items-center space-x-2"
+          >
+            <span>CONTACT</span>
+          </HoverBorderGradient>
+        </div>
+
+        {/* Desktop Navigation 2 when scrolled about 10 rem and this will be sticky , means when scrolling down, it disappears but when scrolled up slight, its visible again*/}
+        {/* <div className="hidden md:flex items-center justify-center w-full gap-10">
+
+          <div className="w-fit mx-auto flex space-x-10 p-0.5 px-4 border-2 border-zinc-800 rounded-full shadow-xl shadow-black/10 backdrop-blur-xl bg-black/45 ">
+            <div className="flex items-center gap-x-2 text-2xl font-semibold">
+              <span className={`inline pointer-events-none transition-all duration-1000 md:text-3xl font-bold ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
+                CC
+              </span>
+            </div>
+
+            <ul className="flex font-medium  text-sm gap-x-4 p-0.5 }">
+              {navLinks.map((link) => (
+                <li
+                  key={link.name}
+                  className={`${darkMode ? 'hover:bg-orange-600/45 text-white' : 'hover:bg-zinc-800 text-zinc-800 hover:text-white'} px-3 py-2 hover:scale-105 duration-500 rounded-full cursor-pointer transition`}
+                  onClick={() => navigate(link.href)}
+                >
+                  {link.name}
+                </li>
+              ))}
+            </ul>
+
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="button"
+              className="bg-zinc-950 hover:scale-110 transition duration-700 text-white flex items-center space-x-2"
             >
-              {link.name}
-            </li>
-          ))}
-        </ul>
+              <span>CONTACT</span>
+            </HoverBorderGradient></div>
 
 
-
+        </div> */}
       </div>
 
       {/* Mobile Navigation */}
-      <div className="md:hidden flex items-center  gap-4">
-
+      <div className="md:hidden flex justify-center items-center  gap-4">
         <button
-          className="focus:outline-none"
+          className="focus:outline-none z-40"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -97,25 +164,36 @@ export default function Navbar() {
             animate={{ opacity: 1, x: -0 }}
             exit={{ opacity: 1, x: 300 }}
             transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
-            className={`md:hidden absolute top-[calc(5rem)] right-0 w-64 h-[calc(100vh)] ${darkMode ? 'bg-zinc-900' : 'bg-white'} text-white backdrop-blur-3xl flex justify-start mobile-menu-container`}
+            className={`md:hidden absolute top-[calc(0rem)] right-0 w-64 h-[calc(100vh)] ${
+              darkMode ? "bg-zinc-900" : "bg-white"
+            } text-white backdrop-blur-3xl flex justify-start mobile-menu-container`}
           >
-            <ul className="flex flex-col items-start pt-8 px-6 gap-4 font-semibold w-full">
-              <li className="text-3xl font-bold flex justify-start cursor-pointer transition w-full text-left py-4">
-                CC
-              </li>
+            <ul className="flex flex-col items-start pt-20 px-6 gap-4 font-semibold w-full">
               {navLinks.map((link) => (
-                <li
-                  key={link.name}
-                  className={`hover:text-blue-500 flex justify-start cursor-pointer transition w-full text-left py-2 ${darkMode ? 'text-gray-300' : 'text-gray-800'}`}
-                  onClick={() => {
-                    navigate(link.href);
-                    setIsOpen(false);
-                  }}
-                >
-                  {link.name}
-                </li>
+                <>
+                  <li
+                    key={link.name}
+                    className={`hover:text-blue-500 flex justify-start cursor-pointer transition w-full text-left py-4 ${
+                      darkMode ? "text-gray-300" : "text-gray-800"
+                    }`}
+                    onClick={() => {
+                      navigate(link.href);
+                      setIsOpen(false);
+                    }}
+                  >
+                    {link.name}
+                  </li>
+                  <div className="w-full h-[0.5px] bg-zinc-300"></div>
+                </>
               ))}
-
+              
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                as="button"
+                className="bg-zinc-950 hover:scale-110 transition duration-700 text-white flex items-center space-x-2"
+              >
+                <span>CONTACT</span>
+              </HoverBorderGradient>
             </ul>
           </motion.div>
         )}

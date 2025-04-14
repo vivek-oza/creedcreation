@@ -4,40 +4,28 @@ import React from "react";
 import { motion } from "motion/react";
 // import { AuroraBackground } from "../../ui/aurora-background";
 import { Spotlight } from "@/components/ui/spotlight-new";
+import { AuroraBackground } from "../../ui/aurora-background";
+import { BackgroundGradientAnimation } from "../../ui/background-gradient-animation";
+import { Vortex } from "../../ui/vortex";
+
 
 export default function HeroSection() {
   return (
     <>
-      <section id="home" className="flex flex-col items-center justify-center rounded-b-3xl shadow-2xl px-5 h-full min-h-[calc(100vh-5rem)] bg-zinc-950 light:bg-slate-50 relative overflow-hidden">
-        {/* <AuroraBackground>
-          <motion.div
-            initial={{ opacity: 0.0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 0.3,
-              duration: 0.8,
-              ease: "easeInOut",
-            }}
-            className="relative flex flex-col gap-4 items-center justify-center px-4"
-          >
-            <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
-              Background lights are cool you know.
-            </div>
-            <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
-              And this, is chemical burn.
-            </div>
-            <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2">
-              Debug now
-            </button>
-          </motion.div>
-        </AuroraBackground> */}
-        <h1 className="text-4xl md:text-7xl animate-fadeIn font-bold font-pilowlava text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-          CREED CREATION
-        </h1>
-        <p className="mt-4 font-normal text-base animate-fadeIn text-neutral-300 max-w-lg text-center mx-auto">
-          A subtle yet effective spotlight effect, because your business needs limelight.
-        </p>
-        <Spotlight />
+      <section id="home" className="flex flex-col items-center justify-center border-b-2 border-slate-500 shadow-2xl px-5  h-screen bg-zinc-950 light:bg-slate-50 relative overflow-hidden">
+
+        {/* VORTEX */}
+        <Vortex
+          backgroundColor="black"
+          className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
+        >
+          <div className="absolute z-30 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
+            <h1 className="bg-clip-text text-7xl text-transparent drop-shadow-2xl bg-gradient-to-b from-white to-white/20">
+              CREED <br /> CREATION
+            </h1>
+          </div>
+        </Vortex>
+
       </section>
     </>
   );

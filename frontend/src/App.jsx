@@ -3,10 +3,12 @@ import React, { useEffect } from "react";
 import CreedCreationRoutes from "./lib/Routes";
 import { Toaster } from "react-hot-toast";
 
+
 function App() {
   return (
     <>
       <CreedCreationRoutes />
+    
       <Toaster
         position="top-center"
         toastOptions={{

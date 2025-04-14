@@ -13,6 +13,7 @@
 @tailwind utilities;
 
 :root {
+  --cursor-color: #000;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -145,6 +146,13 @@ html {
       #6633cc,
       #ff0066);
   background-size: 400% 400%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  height: 100%;
 }
 
 

@@ -44,13 +44,13 @@ const FeatureCard = ({ title, desc, img }) => {
 export function FeaturesMarquee() {
   return (
     <section className="my-16">
-      <div className="flex w-full text-white items-center justify-center pb-16 text-4xl md:text-6xl font-bold">
+      <div className="flex w-full text-white items-center justify-center pb-16 text-3xl md:text-5xl font-bold">
         See Our Projects
       </div>
       <div className="relative">
         {/* Gradient overlays for the entire container */}
-        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-zinc-800 via-zinc-800/50 to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-zinc-800 via-zinc-800/50 to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-zinc-800 to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-zinc-800 to-transparent" />
 
         {/* Marquee container */}
         <div className="relative flex w-full flex-col items-center justify-center gap-6 overflow-hidden bg-zinc-800">
