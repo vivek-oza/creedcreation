@@ -19,6 +19,7 @@ export default {
   theme: {
     extend: {
       animation: {
+        fadeIn:"fadeIn 3s easeIn",
         first: "moveVertical 30s ease infinite",
         second: "moveInCircle 20s reverse infinite",
         third: "moveInCircle 40s linear infinite",
@@ -37,6 +38,10 @@ export default {
         aurora: "aurora 60s linear infinite",
       },
       keyframes: {
+        "fadeIn": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
         moveHorizontal: {
           "0%": {
             transform: "translateX(-50%) translateY(-10%)",

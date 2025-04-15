@@ -22,7 +22,7 @@ export default function Home() {
       <ProcessFlow />
 
       {/* Projects */}
-      <FeaturesMarquee />
+      <ProjectsMarquee />
 
       {/* Team members */}
       <div id="team">
