@@ -45,8 +45,7 @@ export default function ProcessFlow() {
               repeat: Infinity,
             }}
             style={{
-              background:
-                "linear-gradient(90deg, rgba(255,0,140,1) 0%, rgba(0,112,243,1) 33%, rgba(255,165,2,1) 66%, rgba(255,0,0,1) 100%)",
+              background: "linear-gradient(90deg, rgba(255,0,140,1) 0%, rgba(0,112,243,1) 33%, rgba(255,165,2,1) 66%, rgba(255,0,0,1) 100%)",
               filter: "blur(2px)",
             }}
           />
@@ -65,8 +64,7 @@ export default function ProcessFlow() {
               repeat: Infinity,
             }}
             style={{
-              background:
-                "linear-gradient(180deg, rgba(255,0,140,1) 0%, rgba(0,112,243,1) 33%, rgba(255,165,2,1) 66%, rgba(255,0,0,1) 100%)",
+              background: "linear-gradient(180deg, rgba(255,0,140,1) 0%, rgba(0,112,243,1) 33%, rgba(255,165,2,1) 66%, rgba(255,0,0,1) 100%)",
               filter: "blur(4px)",
             }}
           />
@@ -91,7 +89,7 @@ const GridItem = ({ title, color }) => {
     <li className="list-none z-10 mx-auto md:mx-0">
       <motion.div
         className="relative bg-zinc-900 w-[180px] md:w-auto rounded-2xl border-[0.05rem] border-zinc-600 shadow-inner shadow-zinc-700 p-2 md:rounded-3xl md:p-3"
-        whileHover={{
+        whileHover={{ 
           y: -10,
           boxShadow: `0 10px 25px -5px ${color}40`,
         }}
@@ -113,13 +111,13 @@ const GridItem = ({ title, color }) => {
           className="border-0.75 bg-zinc-950 w-[160px] md:w-auto relative flex flex-col justify-between gap-6 overflow-hidden rounded-xl p-6 md:p-6"
           animate={{
             borderColor: isHovered ? color : "#3f3f46",
-            boxShadow: isHovered ? `0 0 15px ${color}20` : "none",
+            boxShadow: isHovered ? `0 0 15px ${color}20` : "none"
           }}
           transition={{ duration: 0.3 }}
         >
           <div className="relative flex flex-1 flex-col justify-between gap-3">
             <div className="space-y-3 text-center">
-              <motion.h3
+              <motion.h3 
                 className="font-sans text-lg font-semibold text-white whitespace-nowrap"
                 animate={{ color: isHovered ? color : "white" }}
                 transition={{ duration: 0.3 }}

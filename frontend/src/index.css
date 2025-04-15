@@ -51,11 +51,6 @@
   --color-3: 210 100% 63%;
   --color-4: 195 100% 63%;
   --color-5: 90 100% 63%;
-  --digilynk-accent: #091540;
-  --digilynk-primary: #0f6bfd;
-  --digilynk-secondary: #82cefd;
-  --digilynk-light: #ffffff;
-  --digilynk-dark: #292930;
 }
 
 .dark {
@@ -116,27 +111,6 @@
 html {
   font-family: poppins;
 }
-
-.digilynkAccent {
-  background-color: var(--digilynk-accent);
-}
-
-.digilynkPrimary {
-  background-color: var(--digilynk-primary);
-}
-
-.digilynkSecondary {
-  background-color: var(--digilynk-secondary);
-}
-
-.digilynkLight {
-  background-color: var(--digilynk-light);
-}
-
-.digilynkDark {
-  background-color: var(--digilynk-dark);
-}
-
 .rainbow-bg {
   background: linear-gradient(90deg,
       #ff0000,

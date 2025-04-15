@@ -92,7 +92,7 @@ export default function Navbar() {
                 className={`${darkMode
                   ? "hover:bg-orange-600/65 text-white"
                   : "hover:bg-zinc-800 text-zinc-800 hover:text-white"
-                  } px-3 py-2 hover:scale-105 duration-500 rounded-full cursor-pointer transition`}
+                  } px-3 py-2 hover:scale-105 duration-300 rounded-full cursor-pointer transition`}
                 onClick={() => navigate(link.href)}
               >
                 {link.name}

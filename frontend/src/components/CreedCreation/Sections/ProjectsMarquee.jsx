@@ -16,7 +16,7 @@ const firstRow = [
   {
     title: "Vercel",
     // desc: "Designs that wow and flows that convert.",
-    img:"https://img.freepik.com/free-vector/travel-landing-page-with-photo_23-2148362640.jpg?t=st=1744361237~exp=1744364837~hmac=555c560cd6643f7c0063221375162f232c74a8419ad98a5b77dbcb90fae00701&w=1480"
+    img: "https://img.freepik.com/free-vector/travel-landing-page-with-photo_23-2148362640.jpg?t=st=1744361237~exp=1744364837~hmac=555c560cd6643f7c0063221375162f232c74a8419ad98a5b77dbcb90fae00701&w=1480"
   },
 
 ];
@@ -24,6 +24,7 @@ const firstRow = [
 const FeatureCard = ({ title, desc, img }) => {
   return (
     <div
+
       className={cn(
         "relative w-full cursor-pointer overflow-hidden rounded-3xl border p-4",
         "border-gray-950/[.1] bg-[#dddddd]"
@@ -34,16 +35,15 @@ const FeatureCard = ({ title, desc, img }) => {
           <div className="text-lg font-semibold text-gray-800">{title}</div>
           <p className="text-xs text-gray-600">{desc}</p>
           <img src={img} alt="" width={300} className="rounded-xl" />
-          {/* <div className="bg-slate-200 h-52 w-72 rounded-md border border-zinc-700"></div> */}
         </div>
       </div>
     </div>
   );
 };
 
-export function FeaturesMarquee() {
+export function ProjectsMarquee() {
   return (
-    <section className="my-16">
+    <section id="projects" className="my-16">
       <div className="flex w-full text-white items-center justify-center pb-16 text-3xl md:text-5xl font-bold">
         See Our Projects
       </div>
