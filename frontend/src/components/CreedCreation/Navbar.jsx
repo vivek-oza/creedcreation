@@ -18,6 +18,14 @@ export default function Navbar() {
   const [darkMode, setDarkMode] = useState(true);
   const navigate = useNavigate();
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', margin:'20px' });
+      setIsOpen(false); // Close mobile menu if open
+    }
+  };
+
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     document.documentElement.classList.toggle("dark");
@@ -37,11 +45,12 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
+  // Update your navLinks to use IDs instead of href
   const navLinks = [
-    { name: "HOME", href: "#home" },
-    { name: "PROJECTS", href: "#projects" },
-    { name: "TEAM", href: "#team" },
-    // { name: "CONTACT", href: "#contact" },
+    { name: "HOME", id: "home" },
+    { name: "BIO", id: "bio" },
+    { name: "PROJECTS", id: "projects" },
+    { name: "TEAM", id: "team" },
   ];
 
   const handleContactClick = () => {
@@ -90,7 +99,7 @@ export default function Navbar() {
                   ? "hover:bg-orange-600/65 text-white"
                   : "hover:bg-zinc-800 text-zinc-800 hover:text-white"
                   } px-3 py-2 hover:scale-105 duration-300 rounded-full cursor-pointer transition`}
-                onClick={() => navigate(link.href)}
+                onClick={() => scrollToSection(link.id)}
               >
                 {link.name}
               </li>
@@ -172,12 +181,8 @@ export default function Navbar() {
                 <>
                   <li
                     key={link.name}
-                    className={`hover:text-blue-500 flex justify-start cursor-pointer transition w-full text-left py-2 ${darkMode ? "text-gray-300" : "text-gray-800"
-                      }`}
-                    onClick={() => {
-                      navigate(link.href);
-                      setIsOpen(false);
-                    }}
+                    className={`hover:text-blue-500 flex justify-start cursor-pointer transition w-full text-left py-2 ${darkMode ? "text-gray-300" : "text-gray-800"}`}
+                    onClick={() => scrollToSection(link.id)}
                   >
                     {link.name}
                   </li>
