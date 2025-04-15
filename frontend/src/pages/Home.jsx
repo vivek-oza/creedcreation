@@ -6,23 +6,23 @@ import HeroSection from "@/components/CreedCreation/Sections/HeroSection";
 import Footer from "@/components/CreedCreation/Sections/Footer";
 import TeamMembers from "@/components/CreedCreation/Sections/TeamMembers";
 import { ProjectsMarquee } from "@/components/CreedCreation/Sections/ProjectsMarquee";
-import QuoteSection from "@/components/CreedCreation/Sections/QuoteSection";
+import BioSection from "@/components/CreedCreation/Sections/BioSection";
 import ProcessFlow from "@/components/CreedCreation/Sections/ProcessFlow";
 
 export default function Home() {
   return (
     <div className="w-full flex flex-col poppins">
       {/* Hero section */}
-      <HeroSection />
+      <HeroSection id="home" />
 
       {/* Quote Section */}
-      <QuoteSection />
+      <BioSection id="bio" />
 
       {/* PROCESS FLOW */}
       <ProcessFlow />
 
       {/* Projects */}
-      <ProjectsMarquee />
+      <ProjectsMarquee id="projects" />
 
       {/* Team members */}
       <div id="team">

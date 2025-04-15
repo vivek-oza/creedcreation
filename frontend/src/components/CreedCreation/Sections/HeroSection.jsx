@@ -35,7 +35,7 @@ export default function HeroSection() {
           <h1 className="bg-clip-text text-center animate-fadeIn font-bold text-5xl md:text-6xl lg:text-7xl text-transparent drop-shadow-2xl bg-gradient-to-b from-white to-white/20">
             CREED <span className="text-orange-600"> CREATION </span>
           </h1>
-          <h2 className="mt-4 text-2xl md:text-3xl font-bold" >
+          <h2 className="mt-4 text-center text-2xl md:text-3xl font-bold" >
             <TextGenerateEffect words={words} />
           </h2>
         </div>
