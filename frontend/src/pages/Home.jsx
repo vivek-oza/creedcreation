@@ -8,7 +8,6 @@ import TeamMembers from "../components/CreedCreation/Sections/TeamMembers";
 import { FeaturesMarquee } from "../components/CreedCreation/Sections/FeaturesMarquee";
 import QuoteSection from "../components/CreedCreation/Sections/QuoteSection";
 import ProcessFlow from "../components/CreedCreation/Sections/ProcessFlow";
-import ImageDiv from "../components/CreedCreation/Sections/ImageDiv";
 
 export default function Home() {
   return (
@@ -21,9 +20,6 @@ export default function Home() {
 
       {/* PROCESS FLOW */}
       <ProcessFlow />
-
-      {/* Image Div */}
-      <ImageDiv></ImageDiv>
 
       {/* Projects */}
       <FeaturesMarquee />

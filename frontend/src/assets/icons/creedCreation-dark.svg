@@ -1,24 +1,5 @@
-<svg width="1300" height="1300" viewBox="0 0 1300 1300" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_40_20)">
-<rect width="1300" height="1300" rx="470" fill="#27272A"/>
-<g filter="url(#filter0_d_40_20)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M1000 300H300V1000H1000V944.009H356.007V356.008H1000V300ZM999.971 887.992H999.993V943.992H943.993V887.998H411.97V411.998H999.971V622.006H999.996V678.006H999.971V887.992ZM943.978 468.007H467.978V832.006H943.978V832H999.957V678.006H742.183C745.925 669.435 748.001 659.97 748.001 650.019C748.001 640.059 745.921 630.584 742.171 622.006H943.978V468.007Z" fill="white"/>
-<ellipse cx="678.012" cy="649.997" rx="49" ry="49" fill="#FF6633"/>
-</g>
-</g>
-<defs>
-<filter id="filter0_d_40_20" x="210.3" y="210.3" width="879.4" height="879.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset/>
-<feGaussianBlur stdDeviation="44.85"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_40_20"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_40_20" result="shape"/>
-</filter>
-<clipPath id="clip0_40_20">
-<rect width="1300" height="1300" fill="white"/>
-</clipPath>
-</defs>
+<svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="58" height="58" rx="21" fill="#27272A"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M45 13H13V45H45V42.4405H15.5604V15.5604H45V13ZM44.9987 39.8795H44.9996V42.4395H42.4396V39.88H18.1186V18.1201H44.9987V27.7203H44.9997V30.2803H44.9987V39.8795ZM42.439 20.68H20.679V37.32H42.439V37.3199H44.998V30.2803H33.2139C33.385 29.8885 33.4799 29.4558 33.4799 29.0009C33.4799 28.5456 33.3848 28.1125 33.2134 27.7203H42.439V20.68Z" fill="white"/>
+<circle cx="30.2805" cy="28.9998" r="2.24" fill="#FF6633"/>
 </svg>

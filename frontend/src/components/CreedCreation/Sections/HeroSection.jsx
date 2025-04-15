@@ -15,7 +15,7 @@ export default function HeroSection() {
       <section id="home" className="flex flex-col items-center justify-center border-b-2 border-slate-500 shadow-2xl px-5  h-screen bg-zinc-950 light:bg-slate-50 relative overflow-hidden">
 
         {/* VORTEX */}
-        <Vortex
+        {/* <Vortex
           backgroundColor="black"
           className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
         >
@@ -24,7 +24,7 @@ export default function HeroSection() {
               CREED <br /> CREATION
             </h1>
           </div>
-        </Vortex>
+        </Vortex> */}
 
       </section>
     </>

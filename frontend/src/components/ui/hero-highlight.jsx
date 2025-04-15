@@ -103,13 +103,15 @@ export const Highlight = ({
             initial={{
                 backgroundSize: "0% 100%",
             }}
-            animate={{
+            whileInView={{
                 backgroundSize: "100% 100%",
+                repeatCount: -1
+
             }}
             transition={{
-                duration: 3,
-                ease: "linear",
-                delay: 3,
+                duration: 1,
+                ease: "easeInOut",
+                delay: 0.25,
             }}
             style={{
                 backgroundRepeat: "no-repeat",
