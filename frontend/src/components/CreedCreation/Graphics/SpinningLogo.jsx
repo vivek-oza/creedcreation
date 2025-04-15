@@ -29,13 +29,13 @@ function Shape() {
 function SpinningLogo() {
     return (
         <Canvas
-            camera={{ position: [0, 0, 5], fov: 60 }}
+            camera={{ position: [0, 5, 0], fov: 60 }}
             style={{ height: "400px", width: "400px" }}
         >
             <ambientLight intensity={0.4} />
             <directionalLight intensity={2} position={[5, 5, 5]} />
             <pointLight color={GLOW_COLOR} intensity={1.5} position={[0, 0, 2]} />
-            <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={2} />
+            <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={12} />
             <Shape />
         </Canvas>
     );
