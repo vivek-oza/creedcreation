@@ -4,7 +4,7 @@
 
 ### Clone the Repository
 ```sh
-git clone  https://github.com/vivek-oza/creedcreation
+git clone https://github.com/vivek-oza/creedcreation
 cd frontend
 ```
 
